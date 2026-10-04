@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0A0A0A;
+  --color-foreground: #EDEDED;
+  --color-muted: #1A1A1A;
+  --color-muted-foreground: #737373;
+  --color-border: #1F1F1F;
+  --color-card: #0F0F0F;
+  --color-accent: #D4D4D4;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Geist Mono', 'SF Mono', monospace;
+
+  --radius: 0.75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+/* ══════════════════════════════════════════════════════
+   Кнопки — жёсткие цвета, не зависят от Tailwind
+   ══════════════════════════════════════════════════════ */
+
+.btn-light {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+  transition: background-color .18s ease, border-color .18s ease;
+}
+.btn-light:hover {
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+.btn-light,
+.btn-light:visited,
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+  color: #000000 !important;
+}
+.btn-light svg {
+  color: #000000;
+  stroke: #000000;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #EDEDED;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: background-color .18s ease, border-color .18s ease;
+}
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+.btn-outline,
+.btn-outline:visited,
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+  color: #EDEDED !important;
+}
+.btn-outline svg {
+  color: #EDEDED;
+  stroke: #EDEDED;
+}
